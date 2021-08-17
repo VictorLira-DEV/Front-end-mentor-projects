@@ -1,0 +1,204 @@
+//refactored
+.section-1{
+    margin-top: -4px;
+    > div {
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .article-1, .article-2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 600px;
+        .text-grid{
+            max-width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            > div{
+                max-width: 60%;
+                margin: 0 auto;
+
+                & :last-child {
+                    color: #283243;
+                    font-family: "Fraunces", serif;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: 900;
+                }
+
+                h2 {
+                    font-family: "Fraunces", serif;
+                    font-weight: 900;
+                    font-size: 2rem;
+                    color: #283243;
+                }
+
+                p {
+                    color: #9d9ba0;
+                    line-height: 30px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    .fruits{
+        height: 600px;
+        display: flex;
+        .img-relative-1, .img-relative-2{
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 100%;
+
+            .text-inside{
+                padding: 20px;
+                width: 400px;
+                margin-bottom: 60px;
+                text-align: center;
+                h2 {
+                    margin-bottom: 25px;
+                    text-align: inherit;
+                    font-family: "Fraunces", serif;
+                }
+                p {
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.section-1 {
+    .article-1 {
+        .img-grid {
+            width: 50%;
+            height: 100%;
+            background-image: url("../images/desktop/image-transform.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .article-2 {
+        .img-grid {
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+    .fruits {
+        .img-relative-1 {
+            background-image: url("../images/desktop/image-graphic-design.jpg");
+            .text-inside {
+                h2 {
+                    color: rgb(29, 86, 72);
+                }
+                p {
+                    color: rgb(71, 135, 121);
+                }
+            }
+        }
+
+        .img-relative-2 {
+            background-image: url("../images/desktop/image-photography.jpg");
+            .text-inside {
+
+                h2 {
+                    color: rgb(21, 82, 120);
+                }
+                p {
+                    color: rgb(15, 102, 140);
+                }
+            }
+        }
+    }
+}
+     
+
+
+
+
+
+@media screen and (max-width: 1007px) {
+    .section-1 {
+        .article-1, .article-2 {
+            .text-grid {
+                max-width: 50%;
+                > div {
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 663px) {
+    .section-1 {
+        .article-1 {
+            flex-direction: column-reverse;
+            height: auto;
+            .text-grid {
+                max-width: 100%;
+                height: auto;
+                padding: 50px 20px;
+                text-align: center;
+            }
+
+            .img-grid {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+        .article-2 {
+            height: auto;
+            flex-direction: column;
+
+            .text-grid {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                padding: 50px 20px;
+                text-align: center;
+            }
+
+            .img-grid {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 797px) {
+    .section-1 {
+        .fruits {
+            flex-direction: column;
+            height: auto;
+            .img-relative-1, .img-relative-2 {
+                height: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section-1 {
+        .fruits {
+            .img-relative-1, .img-relative-2 {
+                .text-inside {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+header {
+    height: 600px;
+    position: relative;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    nav {
+        color: white;
+        width: 100%;
+        padding: 20px 30px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 30px;
+            display: none;
+        }
+
+        h2 {
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            li {
+                cursor: pointer;
+            }
+            & :not(:last-child) {
+                margin-right: 30px;
+            }
+            button {
+                text-transform: uppercase;
+                cursor: pointer;
+                padding: 15px 24px;
+                border: none;
+                font-weight: 700;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    .header-title {
+        height: 100px;
+        position: absolute;
+        right: 50%;
+        top: 30%;
+        transform: translate(50%, -50%);
+        color: white;
+        h1 {
+            font-family: "Fraunces", serif;
+            letter-spacing: 10px;
+            font-size: 3.5rem;
+            font-weight: 600;
+            width: 700px;
+            text-align: center;
+        }
+        img {
+            object-fit: contain;
+            margin-top: 70px;
+        }
+    }
+}
+
+//header
+@media screen and (max-width: 675px) {
+    header {
+        position: relative;
+        nav {
+            margin: 0 auto;
+            img {
+                display: block;
+            }
+
+            ul {
+                position: absolute;
+                margin-left: 0px;
+                transition: all 0.5s;
+                transform: translateY(-300px);
+                z-index: 10;
+                flex-direction: column;
+                // width: 90%;
+                left: 30px;
+                right: 30px;
+                background-color: white;
+                border-radius: 5px;
+                top: -100%;
+                &.display-menu {
+                    transform: translateY(200px);
+                }
+
+                & :not(:last-child) {
+                    margin-right: 0;
+                }
+                li {
+                    padding: 30px 0;
+                    color: rgb(126, 126, 134);
+                    button {
+                        background: yellow;
+                        padding: 15px 24px;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 705px) {
+    header {
+        .header-title {
+            h1 {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 421px) {
+    header {
+        .header-title {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
