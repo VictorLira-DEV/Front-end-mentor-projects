@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+text{
+    color: hsl(233, 13%, 49%);
+    color: hsl(234, 14%, 74%);
+    color: hsl(232, 13%, 33%);
+    color: hsl(240, 78%, 98%);
+    color: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+}
+
+.container{
+    width: 100vw;
+    max-width: 1440px;
+    height: 100vh;
+    // background: rgb(182, 153, 153);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    position: relative;
+    .bg-bottom{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 30;
+    }
+
+    .bg-top{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 30;
+    }
+}
+
+.cards{
+    height: 450px;
+    background: white;
+    width: 1000px;
+    display: flex;
+    position: absolute;
+    z-index: 50;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .card{
+        width: 333px;
+        padding: 50px 30px;
+        height: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        h1{
+            font-size: 3.5rem;
+        }
+
+        ul{
+            list-style: none;
+            width: 100%;
+            text-align: center;
+            li{
+                padding: 15px;
+            }
+        }
+
+        button{
+            cursor: pointer;
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            border: 1px solid black;
+            transition: .2s;
+        }
+
+        div:first-of-type{
+            display: flex;
+            align-items: center;
+
+            span{
+                margin-right: 10px;
+                font-size: 30px;
+            }
+        }
+
+        &.main-card{
+            background: linear-gradient( rgb(165, 169, 238), rgb(110, 112, 220));
+            box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.2);
+            color: white;
+            h1{
+                color: inherit;
+            }
+
+            p{
+                color: inherit;
+            }
+
+            ul{
+                
+                li{
+                    color: inherit;
+                    border-top: 1px solid rgb(165, 169, 238);
+                    &:last-child{
+                        border-bottom: 1px solid rgb(165, 169, 238);
+                    }
+                }
+            }
+
+            button{
+                color: rgb(141, 143, 174);
+                border: 1px solid rgb(110, 112, 220);
+                &:hover{
+                    background: rgb(110, 112, 220);
+                    color: white;
+                    border: 1px solid white;
+                }
+            }
+        }
+
+        &.first-card{
+            box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2)
+        }
+
+        &.last-card{
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2)
+        }
+
+        &.first-card, &.last-card{
+            margin: 20px 0;
+            // border: 1px solid rgb(160, 160, 160);
+            color: rgb(122, 121, 135);
+            padding: 30px 30px;
+            // box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+
+            ul{
+                li{
+                    border-top: 1px solid rgb(211, 213, 252);
+                    &:last-child{
+                        border-bottom: 1px solid rgb(211, 213, 252);
+                    }
+                }
+            }
+            span{
+                color: rgb(70, 72, 87);
+            }
+            h1{
+                color: rgb(70, 72, 87);
+            }
+
+            button{
+                color: white;
+                border: 1px solid white;
+                background: linear-gradient( rgb(165, 169, 238), rgb(110, 112, 220));
+                &:hover{
+                    background: white;
+                    border-color: rgb(110, 112, 220);
+                    color:rgb(110, 112, 220);
+                }
+            }
+        }
+
+        
+    }
+
+    
+}
