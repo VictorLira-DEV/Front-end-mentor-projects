@@ -1,0 +1,185 @@
+header {
+    // padding: 100px;
+    height: 700px;
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas:
+        "menu"
+        "title";
+
+    .overlay {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.3);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    .header {
+        padding: 70px 150px 150px 150px;
+        grid-area: menu;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        // align-items: flex-start;
+        align-items: center;
+        width: 100%;
+
+        .mobile-menu-icon {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .desktop-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            li {
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    .title {
+        grid-area: title;
+        font-size: 5rem;
+        color: white;
+        z-index: 1;
+        position: absolute;
+        border: 2px solid white;
+        margin: 0 0 0 150px;
+        font-family: "Josefin Sans", sans-serif;
+        padding: 40px 60px 20px 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        .header {
+            padding: 0px 50px 150px 50px;
+        }
+
+        .title {
+            margin: 0 0 0 50px;
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 761px) {
+    header {
+        .header {
+            padding: 0px 30px 150px 30px;
+            .mobile-menu-icon {
+                display: block;
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                transition: 0.5s;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background: black;
+
+                &.hide-menu {
+                    right: 100%;
+                }
+
+                > div {
+                    // width: 100vw;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 10px 20px;
+                    margin-bottom: 100px;
+                    margin-top: 20px;
+                }
+
+                ul {
+                    list-style: none;
+                    width: 100%;
+                    padding: 20px;
+                    li {
+                        text-transform: uppercase;
+                        font-family: "Josefin Sans", sans-serif;
+                        color: rgb(211, 211, 211);
+                        font-size: 1.5rem;
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .title {
+            margin: 0 0 0 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        .title {
+            margin: 0 50px;
+            // width: auto;
+            // margin: 0 50px 0 50px;
+            justify-self: center;
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        .title {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 441px) {
+    header {
+        .title {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 542px) {
+    header {
+        .title {
+            margin: 0 30px;
+            // width: auto;
+            // margin: 0 50px 0 50px;
+            justify-self: center;
+            padding: 20px;
+        }
+    }
+}

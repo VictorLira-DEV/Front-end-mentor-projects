@@ -1,0 +1,123 @@
+.section-vr {
+    height: 700px;
+    width: 100%;
+    padding: 150px;
+    position: relative;
+    .img-vr {
+        position: absolute;
+        width: 700px;
+        height: 500px;
+        background-image: url("../images/desktop/image-interactive.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .text-vr {
+        position: absolute;
+        padding: 90px 0 0 80px;
+        max-width: 600px;
+        background: white;
+        right: 150px;
+        bottom: 50px;
+        h1 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: rgb(59, 59, 59);
+        }
+
+        p {
+            line-height: 30px;
+            color: rgb(152, 152, 152);
+        }
+    }
+}
+
+@media screen and (max-width: 1345px) {
+    .section-vr {
+        padding: 150px 30px;
+
+        // .text-vr{
+        //     right: 0;
+        // }
+    }
+}
+
+@media screen and (max-width: 1228px) {
+    .section-vr {
+        // padding: 150px 30px;
+
+        .text-vr {
+            right: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1191px) {
+    .creations {
+        .creations-header {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1071px) {
+    .section-vr {
+        // padding: 150px 30px;
+        display: flex;
+        .text-vr {
+            position: static;
+            height: 100%;
+            padding: 90px 50px;
+            width: 70%;
+        }
+
+        .img-vr {
+            flex: 1;
+            position: static;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 882px) {
+    .section-vr {
+        // padding: 150px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .text-vr {
+            position: static;
+            padding: 90px 50px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .img-vr {
+            position: static;
+            padding: 200px 50px;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 879px) {
+    .section-vr {
+        height: auto;
+        padding: 150px 30px 0 30px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .section-vr {
+        .text-vr {
+            padding: 90px 0;
+        }
+
+        // .img-vr{
+        // }
+    }
+}
