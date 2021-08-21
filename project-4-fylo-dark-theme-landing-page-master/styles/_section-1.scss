@@ -1,0 +1,64 @@
+.section-1 {
+    width: 100%;
+    padding: 0 50px 150px 50px;
+    background: rgb(28, 34, 48);
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-position: bottom;
+    color: white;
+    background-repeat: no-repeat;
+    .intro-ilustration {
+        text-align: center;
+        .desktop-ilustration {
+            margin: 0 auto;
+            width: 800px;
+            max-width: 100%;
+        }
+
+        h1 {
+            line-height: 50px;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: inherit;
+            max-width: 490px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            line-height: 25px;
+            font-size: 16px;
+            color: rgb(189, 189, 192);
+        }
+
+        .btn-get-started {
+            padding: 15px 60px;
+            border: none;
+            border-radius: 20px;
+            background: rgb(66, 176, 207);
+            color: inherit;
+        }
+    }
+}
+
+@media screen and(max-width: 914px) {
+    .section-1 {
+        padding: 0 50px 100px 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-1 {
+        padding: 0 20px 100px 20px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .section-1 {
+        .intro-ilustration {
+            h1 {
+                font-size: 2rem;
+                line-height: 40px;
+            }
+        }
+    }
+}

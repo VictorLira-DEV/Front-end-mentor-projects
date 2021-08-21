@@ -1,0 +1,205 @@
+.section-4 {
+    background: rgb(24, 30, 42);
+    padding: 200px 30px 400px 30px;
+    width: 100%;
+    position: relative;
+    .testimonials {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        .bg-quotes {
+            position: absolute;
+            left: -15px;
+            top: -46px;
+        }
+
+        .testimonial {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+            min-width: 370px;
+            max-width: 370px;
+            border-radius: 8px;
+            padding: 30px 40px;
+            color: white;
+            background: rgb(33, 41, 60);
+            position: relative;
+            > p:first-of-type {
+                margin-bottom: 20px;
+            }
+
+            .profile {
+                > div {
+                    & :first-child {
+                        // color: white;
+                        margin-bottom: 5px;
+                    }
+
+                    & :last-child {
+                        font-size: 12px;
+                        color: rgb(189, 189, 192);
+                    }
+                }
+
+                img {
+                    width: 40px;
+                    border-radius: 100%;
+                    margin-right: 10px;
+                }
+
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .search-section {
+        position: absolute;
+        background: rgb(33, 41, 60);
+        bottom: -144px;
+        width: 900px;
+        padding: 50px 60px;
+        right: 50%;
+        transform: translateX(50%);
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+        h1 {
+            color: inherit;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            input {
+                flex: 1;
+                margin-right: 20px;
+                height: 50px;
+                padding: 0 40px;
+                border: none;
+                border-radius: 30px;
+            }
+
+            button {
+                padding: 10px 30px;
+                border: none;
+                border-radius: 30px;
+                color: inherit;
+                background: rgb(67, 185, 209);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1232px) {
+    .section-4 {
+        .testimonials {
+            justify-content: center;
+            .testimonial {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .section-4 {
+        .testimonials {
+            justify-content: center;
+            .testimonial {
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .section-4 {
+        .testimonials {
+            .bg-quotes {
+                left: -0px;
+                top: -20px;
+                width: 20px;
+            }
+        }
+        .testimonial {
+            min-width: 100%;
+            max-width: 100%;
+            width: auto;
+            padding: 30px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1048px) {
+    .section-4 {
+        .search-section {
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .section-4 {
+        .search-section {
+            width: 90%;
+
+            p {
+                width: auto;
+                line-height: 25px;
+            }
+
+            .search-input {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                input {
+                    width: 100%;
+                    margin-right: 0;
+                    padding: 20px;
+                }
+
+                button {
+                    margin-top: 25px;
+                    width: 100%;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .section-4 {
+        .search-section {
+            padding: 50px 20px;
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 401px) {
+    .section-4 {
+        .testimonials{
+            .testimonial{
+                min-width: 100%;
+                padding: 30px 20px;
+            }
+        }
+    }
+}
